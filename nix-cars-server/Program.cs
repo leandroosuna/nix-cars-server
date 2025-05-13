@@ -77,14 +77,13 @@ namespace nix_cars_server
                 var perc = 100000 / diff.TotalMilliseconds;
 
                 //Console.WriteLine($"{dt:HH:mm:ss.fff} [TPS = {tps:###.##} : {perc:###.##}%]" );
-                Console.WriteLine($"{dt:HH:mm:ss} [Server TPS = {Math.Round(tps)} : {Math.Round(perc)}%]");
+                //Console.WriteLine($"{dt:HH:mm:ss} [Server TPS = {Math.Round(tps)} : {Math.Round(perc)}%]");
 
                 lastDt = dt;
 
                 //Console.Clear();
                 //networkManager.ShowStatus();
-                networkManager.ShowPacketCount();
-                networkManager.ClearPacketCount();
+                networkManager.OneSecUpdate();
 
             }
         }

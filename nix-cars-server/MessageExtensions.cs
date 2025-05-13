@@ -7,7 +7,9 @@ namespace nix_cars_server
     {
         PlayerIdentity,
         PlayerData,
-        CarChange
+        CarChange,
+        Command,
+        Lap
     }
     public enum ServerToClient : ushort
     {
@@ -15,7 +17,11 @@ namespace nix_cars_server
         PlayerName,
         Version,
         CarChange,
-        GameModeChange
+        RaceStartCountdown,
+        Lap,
+        GameModeChange,
+        MapChange,
+        CommandResponse
     }
 
     public static class MessageExtensions

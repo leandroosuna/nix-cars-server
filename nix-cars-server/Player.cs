@@ -25,6 +25,10 @@ namespace nix_cars_server
         public uint outboundPackets = 0;
         public bool lastMovementValid = false;
 
+        public bool f, b, l, r, boost;
+        public float progress;
+        public ushort currentLap;
+        
         
         public Player(uint id)
         {
